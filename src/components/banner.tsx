@@ -26,7 +26,7 @@ export default function Banner() {
 			</div>
 			<div className="border-l border-white h-[15px] mx-4"></div>
 			<button onClick={() => setIsVisible(false)} className="text-white">
-				<IoIosClose className="w-7 h-7" />
+				<IoIosClose className="w-[26px] h-[26px]" />
 			</button>
 		</div>
 	);
