@@ -22,7 +22,7 @@ export default function Navbar() {
 				</Link>
 				<Link href="/contact">
 					<div className="flex justify-center items-center px-6 py-4 rounded-[5px] bg-[#1B5D1D] text-white">
-						Let's talk!
+						Lets talk!
 					</div>
 				</Link>
 			</nav>
