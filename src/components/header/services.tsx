@@ -23,7 +23,26 @@ export default function Services() {
 		// ...
 	}, [pathname, searchParams]);
 
+	useEffect(() => {
+		const closeOnDocumentTouch = (e: any) => {
+			if (dropdownOpen && e.target !== buttonRef.current) {
+				setDropdownOpen(false);
+			}
+		};
+
+		document.addEventListener("touchstart", closeOnDocumentTouch);
+		return () =>
+			document.removeEventListener("touchstart", closeOnDocumentTouch);
+	}, [dropdownOpen]);
+
+	const buttonRef = useRef(null);
+
 	const handleToggleDropdown = () => {
+		setDropdownOpen((prev) => !prev);
+	};
+
+	const handleTouchDropdown = () => {
+		// toggle dropdown state
 		setDropdownOpen((prev) => !prev);
 	};
 
@@ -42,8 +61,10 @@ export default function Services() {
 	return (
 		<div className="relative group">
 			<button
+				ref={buttonRef}
 				onMouseEnter={handleOpenDropdown}
 				onMouseLeave={handleCloseDropdown}
+				onTouchStart={handleTouchDropdown} // Use touchstart for mobile
 				onClick={handleToggleDropdown}
 				className="flex justify-center items-center text-gray-500 hover:text-black"
 			>
