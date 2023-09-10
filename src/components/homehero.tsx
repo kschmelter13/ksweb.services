@@ -8,7 +8,7 @@ import AnimatedContainer from "@/components/animation";
 export default function HomeHero() {
 	return (
 		<div className="content flex flex-row pb-12 pt-10 lg:pb-8 lg:pt-6 ">
-			<div className="w-3/5 md:w-1/2 flex flex-col items-center justify-center">
+			<div className="text-black w-3/5 md:w-1/2 flex flex-col items-center justify-center">
 				<AnimatedContainer>
 					<h1 className="text-centered md:text-left text-3xl md:text-4xl lg:text-5xl">
 						Custom web services for any business.
