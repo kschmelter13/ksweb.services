@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function () {
+export default function service() {
 	return (
 		<div className="bg-white rounded-md shadow-md">
 			<div></div>
