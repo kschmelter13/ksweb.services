@@ -25,7 +25,11 @@ export default function Services() {
 
 	useEffect(() => {
 		const closeOnDocumentTouch = (e: any) => {
-			if (dropdownOpen && e.target !== buttonRef.current) {
+			if (
+				dropdownOpen &&
+				!buttonRef.current?.contains(e.target) &&
+				!dropdownRef.current?.contains(e.target)
+			) {
 				setDropdownOpen(false);
 			}
 		};
@@ -34,15 +38,16 @@ export default function Services() {
 		return () =>
 			document.removeEventListener("touchstart", closeOnDocumentTouch);
 	}, [dropdownOpen]);
+	const dropdownRef = useRef<HTMLDivElement | null>(null);
 
-	const buttonRef = useRef(null);
+	const buttonRef = useRef<HTMLButtonElement | null>(null);
 
 	const handleToggleDropdown = () => {
 		setDropdownOpen((prev) => !prev);
 	};
 
-	const handleTouchDropdown = () => {
-		// toggle dropdown state
+	const handleTouchDropdown = (event: React.TouchEvent) => {
+		event.preventDefault(); // Prevent the onClick event from firing
 		setDropdownOpen((prev) => !prev);
 	};
 
@@ -64,14 +69,14 @@ export default function Services() {
 				ref={buttonRef}
 				onMouseEnter={handleOpenDropdown}
 				onMouseLeave={handleCloseDropdown}
-				onTouchStart={handleTouchDropdown} // Use touchstart for mobile
-				onClick={handleToggleDropdown}
+				onTouchStart={handleTouchDropdown} // Use touchstart for both mobile and desktop
 				className="flex justify-center items-center text-gray-500 hover:text-black"
 			>
 				Services <FaChevronDown size={11} className="ml-[6px] mt-[2px]" />
 			</button>
 			{dropdownOpen && (
 				<div
+					ref={dropdownRef} // <-- Add this ref
 					onMouseEnter={handleOpenDropdown}
 					onMouseLeave={handleCloseDropdown}
 					className="absolute text-[13px] mt-2 space-y-2 w-[140px] bg-white border text-gray-800 border-gray-300 rounded shadow-md"
