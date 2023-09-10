@@ -1,7 +1,10 @@
 import { Suspense } from "react";
 import "../globals.css";
-import Header from "@/components/header";
+import Header from "@/components/header/header";
 import Analytics from "@/components/analytics";
+import Calendly from "@/components/calendlybutton";
+import Script from "next/script";
+import Head from "next/head";
 
 export const metadata = {
 	title: "Create Next App",
@@ -14,13 +17,20 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
+		<html lang="en" id="root">
+			<Head>
+				<link rel="icon" href="/favicon.ico" sizes="any" />
+			</Head>
+			<Script src="https://assets.calendly.com/assets/external/widget.js"></Script>
 			<body className="min-h-screen ">
 				<Suspense>
 					<Analytics></Analytics>
 				</Suspense>
 				<Header></Header>
-				<div className="px-20">{children}</div>
+				<div>{children}</div>
+				<Suspense>
+					<Calendly></Calendly>
+				</Suspense>
 			</body>
 		</html>
 	);

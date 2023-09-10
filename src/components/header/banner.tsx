@@ -14,13 +14,13 @@ export default function Banner() {
 			} h-[50px] flex items-center justify-center space-x-[8px] bg-black px-4`}
 		>
 			<div className="text-white">
-				<span className="text-sm font-medium">FREE website audits</span>
+				<span className="text-md font-medium">FREE website analysis</span>
 			</div>
 			<div className="border-l border-white h-[15px] mx-4"></div>
 			<div className="text-white">
-				<Link href={"/audit"}>
-					<div className="px-[14px] py-[3px] rounded-[5px] bg-[#1B5D1D]">
-						<span className="text-[11px]">Get FREE audit</span>
+				<Link href={"/analysis"}>
+					<div className="text-[12px] font-semibold px-[14px] py-[6px] rounded-[5px] bg-[#1B5D1D]">
+						Get FREE analysis
 					</div>
 				</Link>
 			</div>
