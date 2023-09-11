@@ -24,7 +24,7 @@ export default function ServiceCard({
 }: ServiceCardProps) {
 	return (
 		<Animated delay={0.5}>
-			<div className="border bg-white text-black flex flex-col rounded-lg overflow-hidden shadow-lg text-center align-middle items-center justify-center p-8 pb-10 space-y-6">
+			<div className="border bg-white text-black flex flex-col rounded-xl overflow-hidden shadow-md text-center align-middle items-center justify-center p-8 pb-10 space-y-6">
 				<h2 className="text-2xl md:text-3xl font-semibold mb-2">{title}</h2>
 				<div>
 					<Image src={imageSrc} alt={title} width={width} height={height} />

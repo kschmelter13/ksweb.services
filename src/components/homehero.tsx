@@ -10,13 +10,14 @@ export default function HomeHero() {
 		<div className="content flex flex-row pb-12 pt-10 lg:pb-8 lg:pt-6 ">
 			<div className="text-black w-3/5 md:w-1/2 flex flex-col items-center justify-center">
 				<AnimatedContainer>
-					<h1 className="text-centered md:text-left text-3xl sm:text-4xl lg:text-5xl">
-						Custom web services for any business
+					<h1 className="text-centered md:text-left text-3xl sm:text-4xl xl:text-5xl">
+						Web solutions that <span className="font-semibold">skyrocket</span> your business
+
 					</h1>
 
 					<p className="text-md md:block hidden md:text-xl mt-6 2xl:mt-7 max-w-[700px]">
 						<span className="font-semibold">Improve your business </span>
-						and connect with your customers, with the best custom solutions.
+						and connect with your customers, using the best custom web design and development services.
 					</p>
 					<div className="mt-11 sm:mt-14 md:mt-8 2xl:mt-9">
 						<Link href={"/contact"}>
@@ -31,10 +32,10 @@ export default function HomeHero() {
 			<div className="flex w-2/5 md:w-1/2  lg:p-2 2xl:p-6  lg:pl-4 2xl:pl-8 items-center justify-center">
 				<AnimatedContainer delay={0.3} yChange={50}>
 					<div className="md:hidden inline-block sm:pl-8 sm:pr-8">
-						<Image src={phone} alt="phone" />
+						<Image src={phone} alt="phone" className="max-w-[150px] max-h-[350px] md:max-w-[100%] md:max-h-[100%]"/>
 					</div>
 					<div className="md:block hidden">
-						<Image src={heromocks} alt="website" />
+						<Image  src={heromocks} alt="website" />
 					</div>
 				</AnimatedContainer>
 			</div>
