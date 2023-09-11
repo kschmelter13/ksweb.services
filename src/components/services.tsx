@@ -28,7 +28,7 @@ export default function Services() {
 					<ServiceCard
 						title="Web Development"
 						imageSrc={Dev}
-						text="Need an app or backend system built?"
+						text="Need an application or integration built?"
 						url={"/services/development"}
 					/>
 					<ServiceCard
