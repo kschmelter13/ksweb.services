@@ -11,7 +11,7 @@ export default function HomeHero() {
 			<div className="text-black w-3/5 md:w-1/2 flex flex-col items-center justify-center">
 				<AnimatedContainer>
 					<h1 className="text-centered md:text-left text-3xl sm:text-4xl xl:text-5xl">
-						Web solutions that <span className="font-semibold">skyrocket</span> your business
+						Web solutions that <span className="font-semibold">jumpstart</span> your business
 
 					</h1>
 
@@ -32,7 +32,7 @@ export default function HomeHero() {
 			<div className="flex w-2/5 md:w-1/2  lg:p-2 2xl:p-6  lg:pl-4 2xl:pl-8 items-center justify-center">
 				<AnimatedContainer delay={0.3} yChange={50}>
 					<div className="md:hidden inline-block sm:pl-8 sm:pr-8">
-						<Image src={phone} alt="phone" className="max-w-[150px] max-h-[350px] md:max-w-[100%] md:max-h-[100%]"/>
+						<Image src={phone} alt="phone" className="sb:max-w-[180px] md:w-[100%] md:h-[100%]"/>
 					</div>
 					<div className="md:block hidden">
 						<Image  src={heromocks} alt="website" />
