@@ -18,7 +18,7 @@ export default function Banner() {
 			</div>
 			<div className="border-l border-white h-[15px] mx-4"></div>
 			<div className="text-white">
-				<Link href={"/analysis"}>
+				<Link href={"/services/analysis"}>
 					<div className="text-[12px] font-semibold px-[14px] py-[6px] rounded-[5px] bg-[#1B5D1D]">
 						Get FREE analysis
 					</div>

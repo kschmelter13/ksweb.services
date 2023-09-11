@@ -11,7 +11,7 @@ interface AnimatedContainerProps {
 	ease?: [number, number, number, number]; // Easing function. Default to [0.16, 1, 0.3, 1] if not provided
 }
 
-const AnimatedContainer: FC<AnimatedContainerProps> = ({
+const Animated: FC<AnimatedContainerProps> = ({
 	children,
 	yChange = 30,
 	delay = 0.25,
@@ -55,4 +55,4 @@ const AnimatedContainer: FC<AnimatedContainerProps> = ({
 	);
 };
 
-export default AnimatedContainer;
+export default Animated;
