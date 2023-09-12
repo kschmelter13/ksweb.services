@@ -5,6 +5,7 @@ import Analytics from "@/components/analytics";
 import Calendly from "@/components/calendlybutton";
 import Script from "next/script";
 import Head from "next/head";
+import Footer from "@/components/footer";
 
 export const metadata = {
 	title: "Create Next App",
@@ -28,6 +29,7 @@ export default function RootLayout({
 				</Suspense>
 				<Header></Header>
 				<div>{children}</div>
+				<Footer></Footer>
 				<Suspense>
 					<Calendly></Calendly>
 				</Suspense>
