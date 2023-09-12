@@ -1,8 +1,8 @@
 import { Suspense } from "react";
 import "../globals.css";
 import Header from "@/components/header/header";
-import Analytics from "@/components/client/analytics";
-import Calendly from "@/components/client/calendlybutton";
+import Analytics from "@/components/global/analytics";
+import Calendly from "@/components/global/calendlybutton";
 import Script from "next/script";
 import Head from "next/head";
 import Footer from "@/components/footer";

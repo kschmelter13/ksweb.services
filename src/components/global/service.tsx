@@ -1,5 +1,5 @@
 import React from "react";
-import Animated from "./client/animation";
+import Animated from "./animation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,7 +25,7 @@ export default function ServiceCard({
 	return (
 		<Animated delay={0.5}>
 			<div className="border bg-white text-black flex flex-col rounded-xl overflow-hidden shadow-md text-center align-middle items-center justify-center p-8 pb-10 space-y-6">
-				<h2 className="text-2xl md:text-3xl font-semibold mb-2">{title}</h2>
+				<h2 className="text-2xl xl:text-3xl font-semibold mb-2">{title}</h2>
 				<div>
 					<Image src={imageSrc} alt={title} width={width} height={height} />
 				</div>

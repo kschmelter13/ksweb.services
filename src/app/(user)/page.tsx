@@ -1,12 +1,14 @@
-import HomeHero from "@/components/homehero";
-import Logobar from "@/components/logobar";
-import Services from "@/components/services";
+import HomeHero from "@/components/home/homehero";
+import Logobar from "@/components/home/logobar";
+import Services from "@/components/home/services";
+import About from "@/components/home/about";
 export default function Home() {
 	return (
 		<div>
 			<HomeHero></HomeHero>
 			<Logobar></Logobar>
 			<Services></Services>
+			<About></About>
 		</div>
 	);
 }

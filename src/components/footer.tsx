@@ -8,7 +8,7 @@ export default function Footer() {
 		<div className="bg-[#CCCCCC] pt-10">
 			<div>
 				<div className="sm:px-[3%] md:content flex justify-between items-center">
-					<footer className="flex justify-between flex-col space-y-10 sm:space-y-0 mx-auto sm:mx-0 sm:flex-row w-full">
+					<footer className="flex text-black justify-between flex-col space-y-10 sm:space-y-0 mx-auto sm:mx-0 sm:flex-row w-full">
 						<div className="flex items-center mx-auto sm:mx-0">
 							<KSLogoTitle width={170} height={170} />
 						</div>
