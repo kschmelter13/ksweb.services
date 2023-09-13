@@ -21,7 +21,7 @@ export default function about() {
 						</h3>
 						<p className="text-center text-[18px] xl:text-xl">
 							{
-								"As a solo web developer based in Ellington, CT, I offer personalized attention to each project I work on. With 3 years of experience in the industry, I have developed a deep understanding of what it takes to create a successful website and web presence that represents your brand and attracts customers."
+								"Based in Ellington, CT, KS Web Services specializes in both web design and development, ensuring that every project receives personalized attention. With 3 years in the industry, we have honed our expertise in crafting successful digital solutions that authentically represent your brand and effectively engage your customers."
 							}
 						</p>
 					</Animated>

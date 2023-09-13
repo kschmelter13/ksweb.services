@@ -14,7 +14,6 @@ export default function HomeHero() {
 						Web solutions that <span className="font-semibold">jumpstart</span>{" "}
 						your business
 					</h1>
-
 					<h2 className="text-md md:block hidden md:text-xl mt-6 2xl:mt-7 max-w-[600px]">
 						<span className="font-semibold">Improve your business </span>with
 						the best custom web design and development services.
