@@ -3,9 +3,9 @@ import Abouthero from "@/components/about/abouthero";
 import Content from "@/components/about/content";
 
 export const metadata = {
-	title: "CT Web Design & Web Development Solutions | KS Web Services",
+	title: "About KS Web Services",
 	description:
-		"Elevate your brand with CT web design & development solutions from KS Web Services. Stunning websites, powerful applications, proven results. Contact us today!",
+		"Learn more about KS Web Services, your trusted partner for web design and development solutions in CT. Discover our team's expertise in creating stunning websites, powerful applications, and our proven track record. Get to know us better today!",
 };
 
 export default function page() {
