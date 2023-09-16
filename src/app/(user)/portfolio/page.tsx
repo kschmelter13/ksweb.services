@@ -4,6 +4,9 @@ import React from "react";
 import MPSPhone from "public/mpsphone.png";
 import MPSLaptop from "public/mpslaptop.png";
 import MPSTablet from "public/mpstablet.png";
+import TrendnestLaptop from "public/trendnestlaptop.png";
+import TrendnestTablet from "public/trendnesttablet.png";
+import TrendnestPhone from "public/trendnestphone.png";
 import Project from "@/components/portfolio/project";
 
 const projects = [
@@ -36,7 +39,7 @@ const projects = [
 		],
 		button: "Trendnest.io",
 		url: "https://trendnest.io/",
-		photos: [MPSLaptop, MPSPhone, MPSTablet],
+		photos: [TrendnestLaptop, TrendnestPhone, TrendnestTablet],
 		carousel: "left",
 	},
 	{
