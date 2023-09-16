@@ -4,9 +4,9 @@ import { StaticImageData } from "next/image";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import React, { useRef } from "react";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go"; // Import icons from react-icons
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const CustomSlide = ({
 	imageSrc,
@@ -21,7 +21,7 @@ const CustomSlide = ({
 			<Image
 				src={imageSrc}
 				alt={alt}
-				className="w-[auto] h-[auto] lg:p-10 sb:h-[250px] mx-auto lg:w-[auto] lg:h-[auto]"
+				className="w-[auto] h-[auto] lg:px-10 sb:h-[250px] mx-auto lg:w-[auto] lg:h-[auto]"
 			/>
 		</div>
 	);
@@ -47,8 +47,9 @@ const Carousel: React.FC<CarouselProps> = ({
 		touchMove: true,
 		infinite: true,
 		pauseOnHover: false,
-		arrows: showArrows,
+		arrows: false,
 		speed: 500,
+		dots: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		autoplay: false,
@@ -73,7 +74,7 @@ const Carousel: React.FC<CarouselProps> = ({
 
 	return (
 		<div>
-			<div className="">
+			<div className="px-2 lg:px-0 ">
 				<Slider {...settings}>
 					{photos.map((photo: any, index: any) => (
 						<CustomSlide
@@ -84,10 +85,10 @@ const Carousel: React.FC<CarouselProps> = ({
 					))}
 				</Slider>
 			</div>
-			<div className="hidden lg:flex justify-center">
+			<div className="mt-8 text-black hidden lg:flex justify-center">
 				<button
 					onClick={goToPrevSlide}
-					className="mr-4 bg-gray-200 p-3 rounded-full"
+					className="mr-6 bg-gray-200 p-3 rounded-full"
 				>
 					<GoArrowLeft size={24} /> {/* Use the FaArrowLeft icon */}
 				</button>

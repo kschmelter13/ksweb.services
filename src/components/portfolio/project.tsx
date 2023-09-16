@@ -1,13 +1,12 @@
 import React from "react";
 import Animated from "../global/animation";
-import Link from "next/link";
 import Carousel from "./carousel";
-import { FaCheck } from "react-icons/fa"; // Importing the check icon
+import { FaCheck } from "react-icons/fa6"; // Importing the check icon
 
 export default function Project({ project }: { project: any }) {
 	return (
 		<div className={`${project?.carousel === "left" ? "bg-gray-100" : ""}`}>
-			<div className="content flex flex-col lg:flex-row py-12 lg:py-16">
+			<div className="content flex flex-col lg:flex-row py-14 lg:py-20">
 				<h1 className="text-black block lg:hidden font-medium text-center text-3xl xl:text-4xl mb-10">
 					{project?.title}
 				</h1>
@@ -20,7 +19,7 @@ export default function Project({ project }: { project: any }) {
 						<h1 className="hidden lg:block font-medium text-center text-2xl sb:text-3xl xl:text-4xl">
 							{project?.title}
 						</h1>
-						<h2 className="text-center text-lg lg:text-xl mt-10 2xl:mt-7 max-w-[600px]">
+						<h2 className="text-center text-lg lg:text-xl mt-4 lg:mt-8 max-w-[600px]">
 							{project?.description}
 						</h2>
 
@@ -29,7 +28,7 @@ export default function Project({ project }: { project: any }) {
 							<ul className="list-disc inline-block list-inside mt-6">
 								{project?.features?.map((feature: any, index: any) => (
 									<li key={index} className="flex items-center mt-2">
-										<FaCheck className="text-black mr-4 w-4 h-4" />
+										<FaCheck className="text-black mr-4 w-4 h-4 flex-shrink-0" />
 										<span>{feature}</span>
 									</li>
 								))}
@@ -37,17 +36,20 @@ export default function Project({ project }: { project: any }) {
 						</div>
 
 						<div className="flex items-center justify-center mt-12">
-							<Link href={project?.url}>
-								<div className="inline-block px-6 py-4 rounded-[5px] bg-[#1B5D1D] text-white font-semibold">
-									<span>{project?.button}</span>
-								</div>
-							</Link>
+							<a
+								href={project?.url}
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-block px-6 py-4 rounded-[5px] bg-[#1B5D1D] text-white font-semibold"
+							>
+								<span>{project?.button}</span>
+							</a>
 						</div>
 					</Animated>
 				</div>
 
 				<div
-					className={`flex-grow lg:w-1/2 items-center justify-center ${
+					className={`flex-grow lg:w-1/2 my-auto ${
 						project?.carousel === "right" ? "lg:order-2 lg:pl-6" : "lg:pr-6"
 					}`}
 				>

@@ -3,7 +3,7 @@ import Animated from "../global/animation";
 
 export default function abouthero() {
 	return (
-		<div className="content">
+		<div className="content text-black">
 			<div className="flex pt-12 pb-6 md:pt-20 md:pb-16 text-center items-center justify-center">
 				<Animated>
 					<h1 className="text-3xl xl:text-4xl">

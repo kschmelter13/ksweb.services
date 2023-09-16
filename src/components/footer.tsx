@@ -77,7 +77,7 @@ export default function Footer() {
 						</div>
 					</footer>
 				</div>
-				<div className="content sm:px-[4%] pb-4">
+				<div className="content text-black sm:px-[4%] pb-4">
 					<hr className="mt-10 border-t-1 border-gray-400" />
 					<p className="text-sm text-center mt-4">
 						Copyright © 2023 KS Web Services

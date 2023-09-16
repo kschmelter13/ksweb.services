@@ -10,7 +10,7 @@ const projects = [
 	{
 		title: "Monark Lake Houses",
 		description:
-			"This is a simple 5 page website that was built for Monark Property Services, and their three lake houses on Wangumbaug Lake in Coventry, Connecticut.",
+			"Custom built for Monark Property Services, this simple 5 page website showcases their lake houses on Wangumbaug Lake.",
 		features: [
 			"Built with Wordpress",
 			"Beautiful, responsive design",
@@ -26,7 +26,7 @@ const projects = [
 	{
 		title: "Trendnest",
 		description:
-			"Trendnest is a web application that sends personalized live-data newsletters powered by AI, straight to your inbox.",
+			"Custom built for Trendnest, this web application sends personalized live-data newsletters powered by AI, straight to your inbox.",
 		features: [
 			"Frontend built with Next.js and Tailwind",
 			"Backend built with Supabase, Azure, OpenAI and more",
@@ -40,18 +40,18 @@ const projects = [
 		carousel: "left",
 	},
 	{
-		title: "Monark Lake Houses",
+		title: "Vernon Greenways Volunteers",
 		description:
-			"This is a simple 5 page website that was built for Monark Property Services, and their three lake houses on Wangumbaug Lake in Coventry, Connecticut.",
+			"Custom built for Vernon Greenways Volunteers, this website displays information to its sponsors and commmunity.",
 		features: [
-			"Built with Wordpress",
+			"Re-designed 3 pages using existing Wordpress theme",
+			"Updated and added content site-wide",
+			"Added donation button integrated with Stripe",
 			"Beautiful, responsive design",
-			"Display pages for each house",
-			"Contact form for tenant engagement",
 			"Logo re-design",
 		],
-		button: "MonarkLakeHouses.com",
-		url: "https://monarklakehouses.com/",
+		button: "VernonGreenways.org",
+		url: "https://vernongreenways.org/",
 		photos: [MPSLaptop, MPSPhone, MPSTablet],
 		carousel: "right",
 	},
