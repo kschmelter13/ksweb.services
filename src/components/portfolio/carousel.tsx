@@ -21,7 +21,7 @@ const CustomSlide = ({
 			<Image
 				src={imageSrc}
 				alt={alt}
-				className="w-[auto] h-[100%] lg:p-10 sb:h-[250px] sb:mx-auto lg:w-[auto] lg:h-[100%]"
+				className="w-[auto] h-[auto] lg:p-10 sb:h-[250px] mx-auto lg:w-[auto] lg:h-[auto]"
 			/>
 		</div>
 	);
