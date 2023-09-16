@@ -10,7 +10,7 @@ const projects = [
 	{
 		title: "Monark Lake Houses",
 		description:
-			"Custom built for Monark Property Services, this simple 5 page website showcases their lake houses on Wangumbaug Lake.",
+			"Custom built for Monark Property Services, this 5 page website showcases their lake houses on Wangumbaug Lake.",
 		features: [
 			"Built with Wordpress",
 			"Beautiful, responsive design",
