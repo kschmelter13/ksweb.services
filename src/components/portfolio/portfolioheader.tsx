@@ -6,7 +6,7 @@ export default function abouthero() {
 	return (
 		<div className="content">
 			<Animated>
-				<div className="flex flex-col pt-12 pb-6 md:pt-20 md:pb-16 text-center items-center justify-center">
+				<div className="text-black flex flex-col pt-12 pb-6 md:pt-20 md:pb-16 text-center items-center justify-center">
 					<h1 className="text-center text-3xl sb:text-4xl xl:text-5xl">
 						{"See the projects we've "}
 						<span className="font-semibold">delivered</span>
