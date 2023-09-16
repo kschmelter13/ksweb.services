@@ -42,22 +42,22 @@ const projects = [
 		photos: [TrendnestLaptop, TrendnestPhone, TrendnestTablet],
 		carousel: "left",
 	},
-	{
-		title: "Vernon Greenways Volunteers",
-		description:
-			"Custom built for Vernon Greenways Volunteers, this website displays information to its sponsors and commmunity.",
-		features: [
-			"Re-designed 3 pages using existing Wordpress theme",
-			"Updated and added content site-wide",
-			"Added donation button integrated with Stripe",
-			"Beautiful, responsive design",
-			"Logo re-design",
-		],
-		button: "VernonGreenways.org",
-		url: "https://vernongreenways.org/",
-		photos: [MPSLaptop, MPSPhone, MPSTablet],
-		carousel: "right",
-	},
+	// {
+	// 	title: "Vernon Greenways Volunteers",
+	// 	description:
+	// 		"Custom built for Vernon Greenways Volunteers, this website displays information to its sponsors and commmunity.",
+	// 	features: [
+	// 		"Re-designed 3 pages using existing Wordpress theme",
+	// 		"Updated and added content site-wide",
+	// 		"Added donation button integrated with Stripe",
+	// 		"Beautiful, responsive design",
+	// 		"Logo re-design",
+	// 	],
+	// 	button: "VernonGreenways.org",
+	// 	url: "https://vernongreenways.org/",
+	// 	photos: [MPSLaptop, MPSPhone, MPSTablet],
+	// 	carousel: "right",
+	// },
 
 	// {
 	// 	title: "Monark Lake Houses",
