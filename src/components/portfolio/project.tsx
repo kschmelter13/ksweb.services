@@ -7,7 +7,7 @@ export default function Project({ project }: { project: any }) {
 	return (
 		<div className={`${project?.carousel === "left" ? "bg-gray-100" : ""}`}>
 			<div className="content flex flex-col lg:flex-row py-14 lg:py-20">
-				<h1 className="text-black block lg:hidden font-medium text-center text-3xl xl:text-4xl mb-10">
+				<h1 className="text-black block lg:hidden font-medium text-center text-[24px] sb:text-3xl mb-10">
 					{project?.title}
 				</h1>
 				<div
@@ -16,15 +16,15 @@ export default function Project({ project }: { project: any }) {
 					}`}
 				>
 					<Animated>
-						<h1 className="hidden lg:block font-medium text-center text-2xl sb:text-3xl xl:text-4xl">
+						<h1 className="hidden lg:block font-medium text-center md:text-3xl xl:text-4xl">
 							{project?.title}
 						</h1>
-						<h2 className="text-center text-lg lg:text-xl mt-4 lg:mt-8 max-w-[600px]">
+						<h2 className="text-center text-md sb:text-lg lg:text-xl mt-4 lg:mt-8 max-w-[600px]">
 							{project?.description}
 						</h2>
 
 						{/* Features list */}
-						<div className="flex items-center text-[18px] sb:text-lg xl:text-xl justify-center ml-8">
+						<div className="flex items-center text-[14px] sb:text-[16px] xl:text-xl justify-center ml-8">
 							<ul className="list-disc inline-block list-inside mt-6">
 								{project?.features?.map((feature: any, index: any) => (
 									<li key={index} className="flex items-center mt-2">

@@ -20,7 +20,7 @@ export default function abouthero() {
 						or
 					</h2>
 					<div className="mt-3">
-						<Link href={"/contact"}>
+						<Link href={"/services"}>
 							<div className="text-sm md:text-md inline-block px-6 py-4 rounded-[5px] bg-[#1B5D1D] text-white font-semibold">
 								<span>See our services!</span>
 							</div>
