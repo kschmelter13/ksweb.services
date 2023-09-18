@@ -5,11 +5,12 @@ export default function Info() {
 	return (
 		<div className="">
 			<h2 className="text-black text-3xl lg:text-4xl  font-medium mb-4">
-				Let's Work Together
+				{"Let's Work Together"}
 			</h2>
 			<p className="text-black mb-8 text-md lg:text-xl">
-				We're excited to help you build your next big idea. Get in touch with us
-				today and let's transform your visions into reality.
+				{
+					"We're excited to help you build your next big idea. Get in touch with us today and let's transform your visions into reality."
+				}
 			</p>
 			<ul>
 				<li className="flex items-center mb-4">
