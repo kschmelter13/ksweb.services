@@ -14,7 +14,7 @@ export default function abouthero() {
 					<h2 className="text-md text-center md:text-xl mt-6 2xl:mt-7 max-w-[600px]">
 						Each project shows the{" "}
 						<span className="font-semibold">outstanding work we do.</span> Take
-						a look at the projects weve completed below!
+						a look at the projects {"we've"} completed below!
 					</h2>
 					<h2 className="text-gray-500 font-semibold text-md text-center mt-2">
 						or
