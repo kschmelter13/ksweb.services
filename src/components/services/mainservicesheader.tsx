@@ -5,7 +5,7 @@ import phone from "public/phone3.png";
 import Link from "next/link";
 import AnimatedContainer from "@/components/global/animation";
 
-export default function HomeHero() {
+export default function ServicesHeader() {
 	return (
 		<div className="content flex flex-row pb-12 pt-10 lg:pb-8 lg:pt-6 ">
 			<div className="text-black w-3/5 md:w-1/2 flex flex-col items-center justify-start md:justify-center">

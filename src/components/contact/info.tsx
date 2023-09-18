@@ -4,10 +4,10 @@ import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 export default function Info() {
 	return (
 		<div className="">
-			<h2 className="text-3xl lg:text-4xl  font-medium mb-4">
+			<h2 className="text-black text-3xl lg:text-4xl  font-medium mb-4">
 				Let's Work Together
 			</h2>
-			<p className="mb-8 text-md lg:text-xl">
+			<p className="text-black mb-8 text-md lg:text-xl">
 				We're excited to help you build your next big idea. Get in touch with us
 				today and let's transform your visions into reality.
 			</p>
