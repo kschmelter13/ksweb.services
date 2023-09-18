@@ -85,14 +85,14 @@ export default function Services() {
 					<Link href="/services/design">
 						<div className="block px-3 py-2 hover:bg-gray-100">Web Design</div>
 					</Link>
-					<Link href="/services/redesign">
-						<div className="block px-3 py-2 hover:bg-gray-100">
-							Web Re-design
-						</div>
-					</Link>
 					<Link href="/services/development">
 						<div className="block px-3 py-2 hover:bg-gray-100">
 							Web Development
+						</div>
+					</Link>
+					<Link href="/services/applications">
+						<div className="block px-3 py-2 hover:bg-gray-100">
+							App Development
 						</div>
 					</Link>
 					<Link href="/services/analysis">

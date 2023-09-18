@@ -14,7 +14,7 @@ interface AnimatedContainerProps {
 const Animated: FC<AnimatedContainerProps> = ({
 	children,
 	yChange = 30,
-	delay = 0.25,
+	delay = 0.2,
 	duration = 1.5,
 	ease = [0.16, 1, 0.3, 1],
 }) => {

@@ -11,7 +11,7 @@ export default function HomeHero() {
 			<div className="text-black w-3/5 md:w-1/2 flex flex-col items-center justify-start md:justify-center">
 				<AnimatedContainer>
 					<h1 className="text-centered md:text-left text-3xl sb:text-4xl xl:text-5xl">
-						Web solutions that <span className="font-semibold">jumpstart</span>{" "}
+						<span className="font-semibold">Custom</span> web solutions made for
 						your business
 					</h1>
 					<h2 className="text-md md:block hidden md:text-xl mt-6 2xl:mt-7 max-w-[600px]">

@@ -15,7 +15,7 @@ export default function Project({ project }: { project: any }) {
 						project?.carousel === "right" ? "lg:pr-6" : "lg:order-2 lg:pl-6"
 					}`}
 				>
-					<Animated>
+					<Animated delay={0.25}>
 						<h1 className="hidden lg:block font-medium text-center md:text-3xl xl:text-4xl">
 							{project?.title}
 						</h1>

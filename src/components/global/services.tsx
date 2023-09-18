@@ -1,8 +1,8 @@
 import React from "react";
-import ServiceCard from "../global/service";
-import Design from "public/design.png";
-import Dev from "public/dev.png";
-import Redesign from "public/redesign.png";
+import ServiceCard from "./service";
+import Dev from "public/design.png";
+import AppDev from "public/dev.png";
+import Design from "public/redesign.png";
 import Analysis from "public/analysis.png";
 
 export default function Services() {
@@ -16,20 +16,20 @@ export default function Services() {
 					<ServiceCard
 						title="Web Design"
 						imageSrc={Design}
-						text="Looking to start a new website?"
-						url={"/services/design"}
-					/>
-					<ServiceCard
-						title="Web Re-design"
-						imageSrc={Redesign}
 						text="Does your website need an update?"
-						url={"/services/redesign"}
+						url={"/services/design"}
 					/>
 					<ServiceCard
 						title="Web Development"
 						imageSrc={Dev}
-						text="Need an application or integration built?"
+						text="Looking to upgrade or start a website?"
 						url={"/services/development"}
+					/>
+					<ServiceCard
+						title="App Development"
+						imageSrc={AppDev}
+						text="Need a custom application or system built?"
+						url={"/services/applications"}
 					/>
 					<ServiceCard
 						title="FREE Analysis"
