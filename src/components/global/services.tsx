@@ -36,8 +36,9 @@ export default async function Services() {
 					Custom web solutions made for anyone and any business!
 				</h1>
 				<div className="grid md:grid-cols-2 gap-8 mt-10 md:mt-14 2xl:mt-20">
-					{services.map((service: any) => (
+					{services.map((service: any, index: number) => (
 						<ServiceCard
+							key={index}
 							title={service.title}
 							imageSrc={urlForImage(service?.mainImage).url()}
 							text={service.tagline}
