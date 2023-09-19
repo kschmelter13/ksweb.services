@@ -42,7 +42,7 @@ export default async function Services() {
 							title={service.title}
 							imageSrc={urlForImage(service?.mainImage).url()}
 							text={service.tagline}
-							url={"/services/design"}
+							url={`/services/${service.slug.current}`}
 						/>
 					))}
 
