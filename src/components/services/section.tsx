@@ -13,7 +13,7 @@ export default function Section({
 }) {
 	const isEven = index % 2 === 0;
 
-	const bgColor = isEven ? "bg-gray-200" : "";
+	const bgColor = isEven ? "bg-gray-100" : "";
 	const textPosition = isEven ? "md:order-2 md:pl-6" : "md:pr-6";
 	const imagePosition = isEven ? "md:pr-6" : "md:order-2 md:pl-6";
 	const bgStyle = isEven
@@ -24,7 +24,7 @@ export default function Section({
 		: "bg-gradient-to-br from-white to-gray-100";
 
 	return (
-		<div id={section.id} className={bgStyle}>
+		<div id={section.id} className={bgColor}>
 			<div className="px-[15%] flex flex-col md:flex-row py-14 lg:py-20 items-center justify-between">
 				<h1 className="text-black block md:hidden font-medium text-center text-[24px] sb:text-3xl mb-10">
 					{section?.title}
