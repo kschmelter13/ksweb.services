@@ -1,11 +1,34 @@
 import React from "react";
 import ServiceCard from "./service";
-import Dev from "public/design.png";
-import AppDev from "public/dev.png";
-import Design from "public/redesign.png";
+import Design from "public/design.png";
+import AppDev from "public/appdev.png";
+import Dev from "public/dev.png";
 import Analysis from "public/analysis.png";
+import { client } from "../../../sanity/lib/client";
+import { notFound } from "next/navigation";
+import { urlForImage } from "../../../sanity/lib/image";
 
-export default function Services() {
+export default async function Services() {
+	const query = `
+  *[_type == "services"]{
+    title,
+    servicesList[]->{
+      title,
+      subtitle,
+      slug,
+      tagline,
+      mainImage,
+      sections
+    }
+  }
+`;
+
+	const serviceData = await client.fetch(query);
+	const services = serviceData[0].servicesList;
+
+	if (!services || services.length === 0) {
+		return notFound();
+	}
 	return (
 		<div className="bg-[#EBEBEB]">
 			<div className="content p-4 py-10 md:py-14 2xl:py-20">
@@ -13,30 +36,15 @@ export default function Services() {
 					Custom web solutions made for anyone and any business!
 				</h1>
 				<div className="grid md:grid-cols-2 gap-8 mt-10 md:mt-14 2xl:mt-20">
-					<ServiceCard
-						title="Web Design"
-						imageSrc={Design}
-						text="Does your website need an update?"
-						url={"/services/design"}
-					/>
-					<ServiceCard
-						title="Web Development"
-						imageSrc={Dev}
-						text="Looking to upgrade or start a website?"
-						url={"/services/development"}
-					/>
-					<ServiceCard
-						title="App Development"
-						imageSrc={AppDev}
-						text="Need a custom application or system built?"
-						url={"/services/applications"}
-					/>
-					<ServiceCard
-						title="FREE Analysis"
-						imageSrc={Analysis}
-						text="Want FREE insights on your website?"
-						url={"/services/analysis"}
-					/>
+					{services.map((service: any) => (
+						<ServiceCard
+							title={service.title}
+							imageSrc={urlForImage(service?.mainImage).url()}
+							text={service.tagline}
+							url={"/services/design"}
+						/>
+					))}
+
 					{/* You can add more ServiceCard components as needed */}
 				</div>
 			</div>

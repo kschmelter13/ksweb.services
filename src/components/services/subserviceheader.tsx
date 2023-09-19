@@ -1,44 +1,53 @@
 import React from "react";
 import Image from "next/image";
-import heromocks from "public/heromocks.webp";
-import phone from "public/phone3.png";
-import Link from "next/link";
 import AnimatedContainer from "@/components/global/animation";
+import ScrollBubbleGrid from "./bubblegrid";
+import { urlForImage } from "../../../sanity/lib/image";
 
-export default function HomeHero() {
+export default function SubServiceHero({ service }: { service: any }) {
+	const image = urlForImage(service?.mainImage).url();
+
 	return (
-		<div className="content flex flex-row pb-12 pt-10 lg:pb-8 lg:pt-6 ">
-			<div className="text-black w-3/5 md:w-1/2 flex flex-col items-center justify-start md:justify-center">
+		<div className="content flex flex-row py-12 md:py-16 xl:py-18 ">
+			<div className="text-black w-full md:w-1/2 flex flex-col items-center justify-start md:justify-center">
 				<AnimatedContainer>
-					<h1 className="text-centered md:text-left text-3xl sb:text-4xl xl:text-5xl">
-						<span className="font-semibold">Custom</span> web solutions made for
-						your business
+					<div className="md:hidden float-right w-[150px] sb:w-[175px] px-6 sb:px-8">
+						<Image
+							src={image}
+							alt={service?.mainImage.alt}
+							width={500}
+							height={500}
+						/>
+					</div>
+					<h1 className="text-centered font-medium md:text-left text-3xl sb:text-4xl xl:text-5xl">
+						{service?.title}
 					</h1>
-					<h2 className="text-md md:block hidden md:text-xl mt-6 2xl:mt-7 max-w-[600px]">
-						<span className="font-semibold">Improve your business </span>with
-						the best custom web design and development services.
+					<h2 className="text-lg md:text-xl mt-6 2xl:mt-7 max-w-[600px]">
+						{service?.subtitle}
 					</h2>
-					<div className="mt-11 sm:mt-14 md:mt-8 2xl:mt-9">
-						<Link href={"/contact"}>
-							<div className="inline-block px-6 py-4 rounded-[5px] bg-[#1B5D1D] text-white font-semibold">
-								<span>Lets talk!</span>
-							</div>
-						</Link>
+					<div className="mt-6 md:mt-8 2xl:mt-9 max-w-[500px]">
+						<ScrollBubbleGrid
+							items={service?.sections.map((section: any) => ({
+								text: section.title,
+								id: section.id,
+							}))}
+						/>
 					</div>
 				</AnimatedContainer>
 			</div>
 			{/* Image on medium screens and above */}
-			<div className="flex w-2/5 md:w-1/2  lg:p-2 2xl:p-6  lg:pl-4 2xl:pl-8 items-center justify-center">
+			<div className="flex md:w-1/2 items-start justify-center">
 				<AnimatedContainer delay={0.25} yChange={50}>
-					<div className="md:hidden inline-block sm:pl-8 sm:pr-8">
-						<Image
-							src={phone}
-							alt="phone"
-							className="sb:max-w-[180px] md:w-[100%] md:h-[100%]"
-						/>
-					</div>
-					<div className="md:block hidden">
-						<Image src={heromocks} alt="website" />
+					<div className="flex items-center justify-center">
+						<div className="md:block hidden md:w-3/5 lg:w-1/2">
+							<Image
+								src={image}
+								width={700}
+								height={700}
+								alt={service?.mainImage.alt}
+								className=""
+							/>
+						</div>
 					</div>
 				</AnimatedContainer>
 			</div>

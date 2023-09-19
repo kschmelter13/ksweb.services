@@ -7,14 +7,14 @@ import { motion } from "framer-motion";
 import Services from "./services";
 import { usePathname, useSearchParams } from "next/navigation";
 
-export default function Menu() {
+export default function Menu({ services }: { services: any }) {
 	const [mobileNavOpen, setMobileNavOpen] = useState(false);
 	const pathname = usePathname();
 	const searchParams = useSearchParams(); // <-- Initialize useRouter
 
 	useEffect(() => {
 		const url = `${pathname}?${searchParams}`;
-		console.log(url);
+
 		const handleCloseOnRouteChange = () => {
 			setMobileNavOpen(false);
 		};
@@ -69,7 +69,7 @@ export default function Menu() {
 					<Link href="/portfolio">
 						<div className="text-gray-500 hover:text-black">Portfolio</div>
 					</Link>
-					<Services></Services>
+					<Services services={services}></Services>
 					<Link href="/articles">
 						<div className="text-gray-500 hover:text-black">Articles</div>
 					</Link>

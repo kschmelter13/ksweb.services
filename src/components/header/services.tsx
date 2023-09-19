@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa"; // Import the icon
 import { usePathname, useSearchParams } from "next/navigation";
 
-export default function Services() {
+export default function Services({ services }: { services: any }) {
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const timeoutRef = useRef<number | null>(null);
 	const pathname = usePathname();
@@ -12,7 +12,7 @@ export default function Services() {
 
 	useEffect(() => {
 		const url = `${pathname}?${searchParams}`;
-		console.log(url);
+
 		const handleCloseOnRouteChange = () => {
 			setDropdownOpen(false);
 		};
@@ -82,24 +82,17 @@ export default function Services() {
 					className="absolute text-[13px] mt-2 space-y-2 w-[140px] bg-white border text-gray-800 border-gray-300 rounded shadow-md"
 				>
 					{/* Add services links here */}
-					<Link href="/services/design">
-						<div className="block px-3 py-2 hover:bg-gray-100">Web Design</div>
-					</Link>
-					<Link href="/services/development">
-						<div className="block px-3 py-2 hover:bg-gray-100">
-							Web Development
-						</div>
-					</Link>
-					<Link href="/services/applications">
-						<div className="block px-3 py-2 hover:bg-gray-100">
-							App Development
-						</div>
-					</Link>
-					<Link href="/services/analysis">
-						<div className="block px-3 py-2 hover:bg-gray-100">
-							Free Analysis
-						</div>
-					</Link>
+					{services.map((service: any) => (
+						<Link
+							key={service.slug.current}
+							href={`/services/${service.slug.current}`}
+						>
+							<div className="block px-3 py-2 hover:bg-gray-100">
+								{service.title}
+							</div>
+						</Link>
+					))}
+
 					<Link href="/services">
 						<div className="block px-3 py-2 hover:bg-gray-100">
 							All Services
