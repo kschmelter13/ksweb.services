@@ -9,12 +9,14 @@ export default defineType({
 			name: "title",
 			title: "Service Name",
 			type: "string",
+			validation: (Rule) => Rule.required(),
 			description: "Name of the service being offered",
 		}),
 		defineField({
 			name: "subtitle",
 			title: "Subtitle/Description",
 			type: "text",
+			validation: (Rule) => Rule.required(),
 			description: "Short description of the service",
 		}),
 		defineField({
@@ -28,12 +30,14 @@ export default defineType({
 			name: "tagline",
 			title: "Tagline",
 			type: "text",
+			validation: (Rule) => Rule.required(),
 			description: "A tagline of the service",
 		}),
 		defineField({
 			name: "mainImage",
 			title: "Service Image",
 			type: "image",
+			validation: (Rule) => Rule.required(),
 			options: {
 				hotspot: true,
 			},
@@ -60,24 +64,28 @@ export default defineType({
 							name: "title",
 							title: "Section Title",
 							type: "string",
+							validation: (Rule) => Rule.required(),
 							description: "Title of the section",
 						},
 						{
 							name: "id",
 							title: "Section ID",
 							type: "string",
+							validation: (Rule) => Rule.required(),
 							description:
 								"ID to reference this section, used for scroll-to functionality",
 						},
 						{
 							name: "description",
 							title: "Description",
+							validation: (Rule) => Rule.required(),
 							type: "text",
 							description: "Detailed description of the section",
 						},
 						{
 							name: "features",
 							title: "Features",
+							validation: (Rule) => Rule.required(),
 							type: "array",
 							of: [{ type: "string" }],
 							description: "List of features or attributes of this section",
@@ -86,6 +94,7 @@ export default defineType({
 							name: "image",
 							title: "Section Image",
 							type: "image",
+							validation: (Rule) => Rule.required(),
 							options: {
 								hotspot: true,
 							},
