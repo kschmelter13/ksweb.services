@@ -19,7 +19,7 @@ export default function Section({
 
 	return (
 		<div id={section.id} className={bgColor}>
-			<div className="content lg:px-[15%] 2xl:px-[20%] grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-20 py-10 md:py-14 lg:py-20">
+			<div className="text-black content lg:px-[15%] 2xl:px-[20%] grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 lg:gap-20 py-10 md:py-14 lg:py-20">
 				<div className={`${textClass} order-2`}>
 					<Animated delay={0.25}>
 						<h1 className="font-medium text-[24px] mb-6 md:text-3xl xl:text-4xl">
