@@ -39,4 +39,4 @@ export default function RootLayout({
 	);
 }
 
-export const revalidate = 5;
+export const revalidate = 10;

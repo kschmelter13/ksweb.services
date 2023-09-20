@@ -27,7 +27,7 @@ const ScrollBubbleGrid: React.FC<ScrollBubbleGridProps> = ({ items }) => {
 			{items.map((item, index) => (
 				<div
 					key={index}
-					className="flex items-center justify-between text-[#1B5D1D] bg-white text-sm pl-4 pr-2 py-1 mx-[7px] my-[6px] rounded-full font-medium border-2 border-[#1B5D1D] cursor-pointer"
+					className="flex items-center justify-between text-[#1B5D1D] bg-white text-sm pl-4 pr-2 py-1 mr-[14px] my-[6px] rounded-full font-medium border-2 border-[#1B5D1D] cursor-pointer"
 					onClick={() => handleScroll(item.id)}
 				>
 					<div className="mb-0.45 text-[14px] md:text-[16px]">{item.text}</div>

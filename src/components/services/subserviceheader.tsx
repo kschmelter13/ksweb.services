@@ -8,10 +8,10 @@ export default function SubServiceHero({ service }: { service: any }) {
 	const image = urlForImage(service?.mainImage).url();
 
 	return (
-		<div className="content flex flex-row py-12 md:py-16 xl:py-18 ">
+		<div className="content flex flex-row py-10 md:py-16 xl:py-18 ">
 			<div className="text-black w-full md:w-1/2 flex flex-col items-center justify-start md:justify-center">
 				<AnimatedContainer>
-					<div className="md:hidden float-right w-[150px] sb:w-[175px] px-6 sb:px-8">
+					<div className="md:hidden float-right w-[150px] sb:w-[175px] pl-9 pr-3 sb:px-8">
 						<Image
 							src={image}
 							alt={service?.mainImage.alt}
@@ -22,7 +22,7 @@ export default function SubServiceHero({ service }: { service: any }) {
 					<h1 className="text-centered font-medium md:text-left text-3xl sb:text-4xl xl:text-5xl">
 						{service?.title}
 					</h1>
-					<h2 className="text-lg md:text-xl mt-6 2xl:mt-7 max-w-[600px]">
+					<h2 className="text-xl mt-6 2xl:mt-7 max-w-[600px]">
 						{service?.subtitle}
 					</h2>
 					<div className="mt-6 md:mt-8 2xl:mt-9 max-w-[500px]">
