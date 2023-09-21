@@ -32,7 +32,7 @@ export default function Section({
 						<div className="mt-6 ">
 							<ul className="list-disc inline-block list-inside">
 								{section?.features?.map((feature: any, index: any) => (
-									<li key={index} className="flex mt-2 ">
+									<li key={index} className="flex items-center mt-2 ">
 										<FaCheck className="text-black mr-4 w-4 h-4 flex-shrink-0" />
 										<span>{feature}</span>
 									</li>
