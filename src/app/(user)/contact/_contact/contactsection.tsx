@@ -1,7 +1,7 @@
 import React from "react";
 import Info from "./info";
 import Form from "./form";
-import Animated from "../global/animation";
+import Animated from "../../_components/animation";
 
 export default function ContactSection() {
 	return (

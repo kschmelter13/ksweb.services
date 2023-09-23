@@ -1,11 +1,11 @@
 import { Suspense } from "react";
 import "../globals.css";
-import Header from "@/components/header/header";
-import Analytics from "@/components/global/analytics";
-import Calendly from "@/components/global/calendlybutton";
+import Header from "@/app/(user)/_header/header";
+import Analytics from "@/app/(user)/_components/analytics";
+import Calendly from "@/app/(user)/_components/calendlybutton";
 import Script from "next/script";
 import Head from "next/head";
-import Footer from "@/components/footer";
+import Footer from "@/app/(user)/_components/footer";
 
 export const metadata = {
 	title: "CT Web Design & Web Development Solutions | KS Web Services",

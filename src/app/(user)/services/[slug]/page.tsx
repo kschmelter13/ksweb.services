@@ -2,8 +2,8 @@ import React from "react";
 import { client } from "../../../../../sanity/lib/client";
 import { notFound } from "next/navigation";
 
-import SubServiceHero from "@/components/services/subserviceheader";
-import Section from "@/components/services/section";
+import SubServiceHero from "@/app/(user)/services/_services/subserviceheader";
+import Section from "@/app/(user)/services/_services/section";
 
 // Step 1: Generate all possible slugs for static generation.
 export async function generateStaticParams() {

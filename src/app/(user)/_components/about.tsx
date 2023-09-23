@@ -1,6 +1,6 @@
 import React from "react";
 import KSLogo from "public/ksweblogo.webp";
-import Animated from "../global/animation";
+import Animated from "./animation";
 import Image from "next/image";
 
 export default function About() {

@@ -1,5 +1,5 @@
 import React from "react";
-import Animated from "../global/animation";
+import Animated from "@/app/(user)/_components/animation";
 
 export default function abouthero() {
 	return (

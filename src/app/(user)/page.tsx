@@ -1,7 +1,7 @@
-import HomeHero from "@/components/home/homehero";
-import Logobar from "@/components/global/logobar";
-import Services from "@/components/global/services";
-import About from "@/components/home/about";
+import HomeHero from "@/app/(user)/_components/homehero";
+import Logobar from "@/app/(user)/_components/logobar";
+import Services from "@/app/(user)/_components/services";
+import About from "@/app/(user)/_components/about";
 
 export default async function Home() {
 	return (

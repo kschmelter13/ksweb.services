@@ -1,5 +1,5 @@
 import React from "react";
-import Animated from "../global/animation";
+import Animated from "../../_components/animation";
 import Carousel from "./carousel";
 import { FaCheck } from "react-icons/fa6"; // Importing the check icon
 

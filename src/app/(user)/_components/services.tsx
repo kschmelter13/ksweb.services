@@ -4,9 +4,9 @@ import Design from "public/design.png";
 import AppDev from "public/appdev.png";
 import Dev from "public/dev.png";
 import Analysis from "public/analysis.png";
-import { client } from "../../../sanity/lib/client";
+import { client } from "../../../../sanity/lib/client";
 import { notFound } from "next/navigation";
-import { urlForImage } from "../../../sanity/lib/image";
+import { urlForImage } from "../../../../sanity/lib/image";
 
 export default async function Services() {
 	const query = `

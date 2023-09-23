@@ -1,6 +1,6 @@
 import React from "react";
-import Abouthero from "@/components/about/abouthero";
-import Content from "@/components/about/content";
+import Abouthero from "./_about/abouthero";
+import Content from "./_about/content";
 
 export const metadata = {
 	title: "About KS Web Services",

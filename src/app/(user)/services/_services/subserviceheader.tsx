@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import AnimatedContainer from "@/components/global/animation";
+import AnimatedContainer from "@/app/(user)/_components/animation";
 import ScrollBubbleGrid from "./bubblegrid";
-import { urlForImage } from "../../../sanity/lib/image";
+import { urlForImage } from "../../../../../sanity/lib/image";
 
 export default function SubServiceHero({ service }: { service: any }) {
 	const image = urlForImage(service?.mainImage).url();

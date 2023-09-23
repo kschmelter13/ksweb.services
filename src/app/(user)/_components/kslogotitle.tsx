@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import KSWebLogoTitle from "../../public/ksweblogotitle.svg";
+import KSWebLogoTitle from "/public/ksweblogotitle.svg";
 
 export default function KSLogoTitle({
 	width,

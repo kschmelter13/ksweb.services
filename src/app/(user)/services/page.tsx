@@ -1,5 +1,5 @@
-import Services from "@/components/global/services";
-import ServicesHeader from "@/components/services/mainservicesheader";
+import Services from "@/app/(user)/_components/services";
+import ServicesHeader from "@/app/(user)/services/_services/mainservicesheader";
 import React from "react";
 
 export default function page() {

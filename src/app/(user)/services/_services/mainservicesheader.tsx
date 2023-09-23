@@ -3,7 +3,7 @@ import Image from "next/image";
 import heromocks from "public/heromocks.webp";
 import phone from "public/phone3.png";
 import Link from "next/link";
-import AnimatedContainer from "@/components/global/animation";
+import AnimatedContainer from "@/app/(user)/_components/animation";
 
 export default function ServicesHeader() {
 	return (

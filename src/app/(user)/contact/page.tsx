@@ -1,4 +1,4 @@
-import ContactSection from "@/components/contact/contactsection";
+import ContactSection from "./_contact/contactsection";
 import React from "react";
 
 export default function page() {

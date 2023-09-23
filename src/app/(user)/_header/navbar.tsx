@@ -1,9 +1,9 @@
 import React from "react";
-import KSLogoTitle from "../kslogotitle";
+import KSLogoTitle from "../_components/kslogotitle";
 import Link from "next/link";
 import Menu from "./menu";
 import Services from "./services";
-import { client } from "../../../sanity/lib/client";
+import { client } from "../../../../sanity/lib/client";
 import { notFound } from "next/navigation";
 
 export default async function Navbar() {

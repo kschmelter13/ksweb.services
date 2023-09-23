@@ -1,5 +1,5 @@
 import React from "react";
-import Animated from "@/components/global/animation";
+import Animated from "@/app/(user)/_components/animation";
 import Image from "next/image";
 import Me from "public/me.jpg";
 

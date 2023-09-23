@@ -1,5 +1,5 @@
-import Header from "@/components/portfolio/portfolioheader";
-import LogoBar from "@/components/global/logobar";
+import Header from "@/app/(user)/portfolio/_portfolio/portfolioheader";
+import LogoBar from "../_components/logobar";
 import React from "react";
 import MPSPhone from "public/mpsphone.png";
 import MPSLaptop from "public/mpslaptop.png";
@@ -7,7 +7,7 @@ import MPSTablet from "public/mpstablet.png";
 import TrendnestLaptop from "public/trendnestlaptop.png";
 import TrendnestTablet from "public/trendnesttablet.png";
 import TrendnestPhone from "public/trendnestphone.png";
-import Project from "@/components/portfolio/project";
+import Project from "@/app/(user)/portfolio/_portfolio/project";
 
 const projects = [
 	{

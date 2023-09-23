@@ -1,8 +1,8 @@
 import React from "react";
-import Animated from "../global/animation";
+import Animated from "../../_components/animation";
 import { FaCheck } from "react-icons/fa6";
 import Image from "next/image";
-import { urlForImage } from "../../../sanity/lib/image";
+import { urlForImage } from "../../../../../sanity/lib/image";
 
 export default function Section({
 	section,
