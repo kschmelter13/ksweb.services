@@ -7,24 +7,12 @@ import Analysis from "public/analysis.png";
 import { client } from "../../../../sanity/lib/client";
 import { notFound } from "next/navigation";
 import { urlForImage } from "../../../../sanity/lib/image";
+import { getAllServices } from "@/_sanityservices/services";
 
 export default async function Services() {
-	const query = `
-  *[_type == "services"]{
-    title,
-    servicesList[]->{
-      title,
-      subtitle,
-      slug,
-      tagline,
-      mainImage,
-      sections
-    }
-  }
-`;
-
-	const serviceData = await client.fetch(query);
-	const services = serviceData[0].servicesList;
+	const services = await getAllServices().then((data) => {
+		return data.map((page: any) => page.service);
+	});
 
 	if (!services || services.length === 0) {
 		return notFound();

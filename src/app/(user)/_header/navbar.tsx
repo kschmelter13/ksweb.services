@@ -5,24 +5,10 @@ import Menu from "./menu";
 import Services from "./services";
 import { client } from "../../../../sanity/lib/client";
 import { notFound } from "next/navigation";
+import { getAllServices } from "@/_sanityservices/services";
 
 export default async function Navbar() {
-	const query = `
-  *[_type == "services"]{
-    title,
-    servicesList[]->{
-      title,
-      subtitle,
-      slug,
-      tagline,
-      mainImage,
-      sections
-    }
-  }
-`;
-
-	const serviceData = await client.fetch(query);
-	const services = serviceData[0].servicesList;
+	const services = await getAllServices();
 
 	if (!services || services.length === 0) {
 		return notFound();

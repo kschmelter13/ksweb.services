@@ -1,11 +1,30 @@
 import React from "react";
 import Abouthero from "./_about/abouthero";
 import Content from "./_about/content";
+import { getMainPages } from "@/_sanityservices/services";
+import { Metadata } from "next";
 
-export const metadata = {
-	title: "About KS Web Services",
-	description:
-		"Learn more about KS Web Services, your trusted partner for web design and development solutions in CT. Discover our team's expertise in creating stunning websites, powerful applications, and our proven track record. Get to know us better today!",
+type Props = {
+	params: { slug: string };
+};
+
+export const generateMetadata = async (props: Props): Promise<Metadata> => {
+	const page = await getMainPages().then((pages) => {
+		return pages.find((page: any) => page.slug.current === "about");
+	});
+	if (page?.seo) {
+		return {
+			title: `${page?.seo?.metaTitle}`,
+			description: `${page?.seo?.metaDesc}`,
+		};
+	} else {
+		// Handle the case where no page is found
+		return {
+			title: "CT Web Design & Web Development Solutions | KS Web Services",
+			description:
+				"Elevate your brand with CT web design & development solutions from KS Web Services. Stunning websites, powerful applications, proven results. Contact us today!",
+		};
+	}
 };
 
 export default function page() {

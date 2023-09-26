@@ -20,9 +20,6 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" id="root">
-			<Head>
-				<link rel="icon" href="/favicon.ico" sizes="any" />
-			</Head>
 			<Script src="https://assets.calendly.com/assets/external/widget.js"></Script>
 			<body className="min-h-screen ">
 				<Suspense>
