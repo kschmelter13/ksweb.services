@@ -4,7 +4,6 @@ import Header from "@/app/(user)/_header/header";
 import Analytics from "@/app/(user)/_components/analytics";
 import Calendly from "@/app/(user)/_components/calendlybutton";
 import Script from "next/script";
-import Head from "next/head";
 import Footer from "@/app/(user)/_components/footer";
 
 export const metadata = {
@@ -25,7 +24,9 @@ export default function RootLayout({
 				<Suspense>
 					<Analytics></Analytics>
 				</Suspense>
-				<Header></Header>
+				<Suspense>
+					<Header></Header>
+				</Suspense>
 				<Suspense>
 					<div>{children}</div>
 				</Suspense>
