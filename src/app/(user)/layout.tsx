@@ -6,6 +6,14 @@ import Calendly from "@/app/(user)/_components/calendlybutton";
 import Script from "next/script";
 import Footer from "@/app/(user)/_components/footer";
 
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	name: "KS Web Services",
+	alternateName: "KS Web Services",
+	url: "https://ksweb.services",
+};
+
 export const metadata = {
 	title: "CT Web Design & Web Development Solutions | KS Web Services",
 	description:
@@ -30,6 +38,10 @@ export default function RootLayout({
 				<Suspense>
 					<Calendly></Calendly>
 				</Suspense>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+				/>
 			</body>
 		</html>
 	);
