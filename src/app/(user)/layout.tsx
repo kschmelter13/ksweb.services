@@ -25,7 +25,9 @@ export default function RootLayout({
 					<Analytics></Analytics>
 				</Suspense>
 				<Header></Header>
-				<div>{children}</div>
+				<Suspense>
+					<div>{children}</div>
+				</Suspense>
 				<Footer></Footer>
 				<Suspense>
 					<Calendly></Calendly>

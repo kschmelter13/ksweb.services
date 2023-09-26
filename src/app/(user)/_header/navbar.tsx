@@ -6,7 +6,7 @@ import Services from "./services";
 import ServicesFallback from "./servicesfallback";
 import { notFound } from "next/navigation";
 import { getAllServices } from "@/_sanityservices/services";
-import { FaChevronDown } from "react-icons/fa";
+import MenuFallback from "./menufallback";
 import { Suspense } from "react";
 
 export default async function Navbar() {
@@ -38,7 +38,9 @@ export default async function Navbar() {
 					</div>
 				</Link>
 			</nav>
-			<Menu services={services}></Menu>
+			<Suspense fallback={<MenuFallback />}>
+				<Menu services={services}></Menu>
+			</Suspense>
 		</header>
 	);
 }
