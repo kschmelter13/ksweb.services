@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import "../globals.css";
+import "./globals.css";
 import Header from "@/app/(user)/_header/header";
 import Analytics from "@/app/(user)/_components/analytics";
 import Calendly from "@/app/(user)/_components/calendlybutton";
@@ -25,9 +25,7 @@ export default function RootLayout({
 					<Analytics></Analytics>
 				</Suspense>
 				<Header></Header>
-				<Suspense>
-					<div>{children}</div>
-				</Suspense>
+				<div>{children}</div>
 				<Footer></Footer>
 				<Suspense>
 					<Calendly></Calendly>
