@@ -24,12 +24,8 @@ export default function RootLayout({
 				<Suspense>
 					<Analytics></Analytics>
 				</Suspense>
-				<Suspense>
-					<Header></Header>
-				</Suspense>
-				<Suspense>
-					<div>{children}</div>
-				</Suspense>
+				<Header></Header>
+				<div>{children}</div>
 				<Footer></Footer>
 				<Suspense>
 					<Calendly></Calendly>

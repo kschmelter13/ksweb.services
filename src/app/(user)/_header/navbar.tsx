@@ -3,9 +3,11 @@ import KSLogoTitle from "../_components/kslogotitle";
 import Link from "next/link";
 import Menu from "./menu";
 import Services from "./services";
-import { client } from "../../../../sanity/lib/client";
+import ServicesFallback from "./servicesfallback";
 import { notFound } from "next/navigation";
 import { getAllServices } from "@/_sanityservices/services";
+import { FaChevronDown } from "react-icons/fa";
+import { Suspense } from "react";
 
 export default async function Navbar() {
 	const services = await getAllServices();
@@ -24,7 +26,9 @@ export default async function Navbar() {
 				<Link href="/portfolio">
 					<div className="text-gray-500 hover:text-black">Portfolio</div>
 				</Link>
-				<Services services={services}></Services>
+				<Suspense fallback={<ServicesFallback />}>
+					<Services services={services}></Services>
+				</Suspense>
 				<Link href="/articles">
 					<div className="text-gray-500 hover:text-black">Articles</div>
 				</Link>

@@ -5,25 +5,15 @@ import Link from "next/link";
 import { FiMenu, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Services from "./services";
-import { usePathname, useSearchParams } from "next/navigation";
+import ServicesFallback from "./servicesfallback";
+import { Suspense } from "react";
 
 export default function Menu({ services }: { services: any }) {
 	const [mobileNavOpen, setMobileNavOpen] = useState(false);
-	const pathname = usePathname();
-	const searchParams = useSearchParams(); // <-- Initialize useRouter
 
-	useEffect(() => {
-		const url = `${pathname}?${searchParams}`;
-
-		const handleCloseOnRouteChange = () => {
-			setMobileNavOpen(false);
-		};
-
-		handleCloseOnRouteChange();
-
-		// You can now use the current URL
-		// ...
-	}, [pathname, searchParams]);
+	const closeMenu = () => {
+		setMobileNavOpen(false);
+	};
 
 	const variants = {
 		open: {
@@ -63,18 +53,20 @@ export default function Menu({ services }: { services: any }) {
 				transition={{ duration: 0.5 }}
 			>
 				<nav className="relative flex flex-col space-y-6 py-8 pr-4 pl-4 text-sm items-start font-semibold">
-					<Link href="/about">
+					<Link href="/about" onClick={closeMenu}>
 						<div className="text-gray-500 hover:text-black">About</div>
 					</Link>
-					<Link href="/portfolio">
+					<Link href="/portfolio" onClick={closeMenu}>
 						<div className="text-gray-500 hover:text-black">Portfolio</div>
 					</Link>
-					<Services services={services}></Services>
-					<Link href="/articles">
+					<Suspense fallback={<ServicesFallback />}>
+						<Services services={services}></Services>
+					</Suspense>
+					<Link href="/articles" onClick={closeMenu}>
 						<div className="text-gray-500 hover:text-black">Articles</div>
 					</Link>
 					<div className="w-full">
-						<Link href={"/contact"}>
+						<Link href={"/contact"} onClick={closeMenu}>
 							<div className="w-full text-center py-4 rounded-[5px] bg-[#1B5D1D] text-white font-semibold">
 								<span>Lets talk!</span>
 							</div>
