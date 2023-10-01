@@ -1,5 +1,4 @@
 import React from "react";
-import { client } from "../../../../../sanity/lib/client";
 import { notFound } from "next/navigation";
 import { getAllServices } from "@/_sanityservices/services";
 import { Metadata } from "next";

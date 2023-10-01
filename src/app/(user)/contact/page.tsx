@@ -1,6 +1,6 @@
 import ContactSection from "./_contact/contactsection";
 import React from "react";
-import { getMainPages } from "@/_sanityservices/services";
+import { getMainPages } from "../../../_sanityservices/services";
 import { Metadata } from "next";
 
 type Props = {

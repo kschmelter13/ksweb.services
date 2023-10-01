@@ -12,6 +12,7 @@ export const generateMetadata = async (props: Props): Promise<Metadata> => {
 	const page = await getMainPages().then((pages) => {
 		return pages.find((page: any) => page.slug.current === "services");
 	});
+
 	if (page?.seo) {
 		return {
 			title: `${page?.seo?.metaTitle}`,
