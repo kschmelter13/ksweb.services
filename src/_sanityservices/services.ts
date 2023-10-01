@@ -51,31 +51,44 @@ export const getMainPages = async () => {
 	return services;
 };
 
-export const getAllArticles = async () => {
+export async function getAllRedirects() {
 	const query = `
-        *[_type == "pages"]{
-            title,
-            servicesList[]->{
-                title,
-                subtitle,
-                slug,
-                tagline,
-                mainImage,
-                sections[]{
-                    title,
-                    description,
-                    id,
-                    features,
-                    image
-                }
-            }
-        }
-    `;
+          *[_type == "redirects"]{
+              from,
+              to
+          }
+      `;
 
-	const serviceData = await client.fetch(query);
+	const redirectsData = await client.fetch(query);
 
-	// Now filter the servicesList in JavaScript to get the service with the matching slug
-	const services = serviceData[0].servicesList;
+	return redirectsData;
+}
 
-	return services;
-};
+// export const getAllArticles = async () => {
+// 	const query = `
+//         *[_type == "pages"]{
+//             title,
+//             servicesList[]->{
+//                 title,
+//                 subtitle,
+//                 slug,
+//                 tagline,
+//                 mainImage,
+//                 sections[]{
+//                     title,
+//                     description,
+//                     id,
+//                     features,
+//                     image
+//                 }
+//             }
+//         }
+//     `;
+
+// 	const serviceData = await client.fetch(query);
+
+// 	// Now filter the servicesList in JavaScript to get the service with the matching slug
+// 	const services = serviceData[0].servicesList;
+
+// 	return services;
+// };

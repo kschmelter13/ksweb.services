@@ -20,6 +20,12 @@ export const metadata = {
 		"Elevate your brand with CT web design & development solutions from KS Web Services. Stunning websites, powerful applications, proven results. Contact us today!",
 };
 
+const fallback = (
+	<div className="absolute bottom-0 right-0">
+		<button className="p-2 bg-green-800">Hey!</button>
+	</div>
+);
+
 export default function RootLayout({
 	children,
 }: {
@@ -35,9 +41,9 @@ export default function RootLayout({
 				<Header></Header>
 				<div>{children}</div>
 				<Footer></Footer>
-				<Suspense>
-					<Calendly></Calendly>
-				</Suspense>
+
+				<Calendly></Calendly>
+
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
