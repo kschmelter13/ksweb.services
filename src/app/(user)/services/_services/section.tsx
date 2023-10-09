@@ -16,6 +16,7 @@ export default function Section({
 	const bgColor = isEven ? "bg-gray-100" : "";
 	const textClass = isEven ? "md:order-2" : "md:order-1";
 	const imageClass = isEven ? "md:order-1" : "md:order-2";
+	const imagePadding = isEven ? "md:pr-[15%]" : "md:pl-[15%]";
 
 	return (
 		<div id={section.id} className={bgColor}>
@@ -50,7 +51,7 @@ export default function Section({
 								alt={""}
 								width={500}
 								height={500}
-								className="w-1/2 md:w-5/6 xl:w-2/3 2xl:w-3/5"
+								className={`w-1/2 md:w-full ${imagePadding}`}
 							/>
 						</div>
 					</Animated>
