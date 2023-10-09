@@ -51,7 +51,7 @@ export default function Section({
 								alt={""}
 								width={500}
 								height={500}
-								className={`w-1/2 md:w-full ${imagePadding}`}
+								className={`w-2/3 md:w-full ${imagePadding}`}
 							/>
 						</div>
 					</Animated>
