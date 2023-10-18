@@ -17,6 +17,14 @@ export const generateMetadata = async (props: Props): Promise<Metadata> => {
 		return {
 			title: `${page?.seo?.metaTitle}`,
 			description: `${page?.seo?.metaDesc}`,
+			metadataBase: new URL("https://ksweb.services"),
+			alternates: {
+				canonical: "/",
+				languages: {
+					"en-US": "/en-US",
+					"de-DE": "/de-DE",
+				},
+			},
 		};
 	} else {
 		// Handle the case where no page is found
