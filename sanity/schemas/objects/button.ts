@@ -1,4 +1,4 @@
-import { defineType, defineField } from "sanity";
+import { defineType, defineField, defineArrayMember } from "sanity";
 import { IoUnlinkOutline } from "react-icons/io5";
 
 const labelField = defineField({
@@ -25,7 +25,7 @@ const newWindowField = defineField({
 	initialValue: false,
 });
 
-export default defineType({
+export default defineArrayMember({
 	title: "Button",
 	name: "button",
 	type: "object",

@@ -17,6 +17,12 @@ export default defineType({
 			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
+			name: "featured",
+			type: "boolean",
+			title: "Featured?",
+			validation: (Rule) => Rule.required(),
+		}),
+		defineField({
 			name: "date",
 			type: "date",
 			title: "Date",
@@ -43,9 +49,9 @@ export default defineType({
 		}),
 		defineField({
 			name: "summary",
-			type: "simplePortableText",
+			type: "text",
 			title: "Summary",
-			validation: (Rule) => Rule.required().max(200),
+			validation: (Rule) => Rule.required().max(500),
 		}),
 		defineField({
 			name: "categories",

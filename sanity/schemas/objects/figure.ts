@@ -1,4 +1,4 @@
-import { defineType, defineField } from "sanity";
+import { defineType, defineField, defineArrayMember } from "sanity";
 
 const crops = [
 	{ title: "Original", value: 0 },
@@ -36,7 +36,7 @@ const altField = defineField({
 	},
 });
 
-export default defineType({
+export default defineArrayMember({
 	title: "Image",
 	name: "figure",
 	type: "image",
