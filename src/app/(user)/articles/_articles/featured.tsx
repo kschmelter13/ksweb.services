@@ -19,10 +19,12 @@ export default function Featured({ featured }: { featured: any }) {
 						}`}
 					>
 						<Animated>
-							<h1 className="mb-5 text-3xl lg:text-4xl font-medium">
+							<h1 className="mb-5 text-black text-3xl lg:text-4xl font-medium">
 								{featured[0].title}
 							</h1>
-							<p className="text-md lg:text-xl">{featured[0].summary}</p>
+							<p className="text-md text-black lg:text-xl">
+								{featured[0].summary}
+							</p>
 							<div className="flex items-center space-x-4 mt-5">
 								<Link href={`/articles/${featured[0].slug.current}`}>
 									<div className="bg-[#1B5D1D] text-white text-sm px-6 py-3 rounded mr-6 whitespace-nowrap flex-shrink-0">

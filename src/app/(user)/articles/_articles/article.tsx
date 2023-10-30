@@ -9,7 +9,7 @@ function ArticleBlock(props: ArticleBlockProps) {
 
 	return (
 		<div className="page-block page-block--text">
-			<div className="container mx-auto my-12">
+			<div className="container mx-auto my-12 text-black">
 				<div>
 					{text && (
 						<ProseableText

@@ -29,19 +29,18 @@ export default async function page({ params }: { params: any }) {
 	// const content = await getArticleContent();
 
 	return (
-		<div>
+		<div className="px-6 lg:px-0">
 			<section>
-				<div className="page-block page-block--text">
+				<div className="page-block page-block--text text-black">
 					<div className="container mx-auto my-12">
 						<div>
 							<header className="mb-8 mx-auto prose-sm prose sm:prose sm:max-w-3xl">
-								<h1 className="mb-3 text-4xl font-medium">{article.title}</h1>
+								<h1 className="mb-3 text-4xl text-black font-medium">
+									{article.title}
+								</h1>
 							</header>
 						</div>
 					</div>
-				</div>
-				<div className="container page-block">
-					<div className="mx-auto my-8 md:my-12 lg:my-16 prose-sm prose sm:prose sm:max-w-3xl "></div>
 				</div>
 			</section>
 			<ArticleBlock text={article.blocks}></ArticleBlock>

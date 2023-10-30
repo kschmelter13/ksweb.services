@@ -25,7 +25,7 @@ const ArticleGrid: React.FC<{ articles: ArticleProps[] }> = ({ articles }) => {
 						/>
 					</Link>
 					<div className="p-4 bg-white">
-						<h2 className="text-xl font-medium">{article.title}</h2>
+						<h2 className="text-xl text-black font-medium">{article.title}</h2>
 						<p>{article.snippet}</p>
 						<Link href={`/articles/${article.slug.current}`}>
 							<div className="mt-2 inline-flex items-center bg-[#1B5D1D] text-white px-4 py-2 rounded">
