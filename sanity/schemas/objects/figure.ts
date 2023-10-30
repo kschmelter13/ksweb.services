@@ -1,5 +1,3 @@
-import { defineType, defineField, defineArrayMember } from "sanity";
-
 const crops = [
 	{ title: "Original", value: 0 },
 	{ title: "1 : 1 (square)", value: 1 },
@@ -9,41 +7,43 @@ const crops = [
 	{ title: "16 : 9", value: 1.7777777778 },
 ];
 
-const customRatioField = defineField({
-	title: "Display Size (aspect ratio)",
-	name: "customRatio",
-	type: "number",
-	options: {
-		list: crops,
-	},
-	validation: (Rule) => {
-		return Rule.custom((field: any, context: { parent?: any }) =>
-			"asset" in context.parent && field === undefined ? "Required!" : true
-		);
-	},
-});
-
-const altField = defineField({
-	title: "Alternative text",
-	name: "alt",
-	type: "string",
-	description: "Important for SEO and accessiblity.",
-
-	validation: (Rule) => {
-		return Rule.custom((field: any, context: { parent?: any }) =>
-			"asset" in context.parent && field === undefined ? "Required!" : true
-		);
-	},
-});
-
-export default defineArrayMember({
+export default {
 	title: "Image",
 	name: "figure",
 	type: "image",
 	options: {
 		hotspot: true,
 	},
-	fields: [customRatioField, altField],
+	fields: [
+		{
+			title: "Display Size (aspect ratio)",
+			name: "customRatio",
+			type: "number",
+			options: {
+				list: crops,
+			},
+			validation: (Rule: any) => {
+				return Rule.custom((field: any, context: any) =>
+					context.parent && "asset" in context.parent && field === undefined
+						? "Required!"
+						: true
+				);
+			},
+		},
+		{
+			title: "Alternative text",
+			name: "alt",
+			type: "string",
+			description: "Important for SEO and accessiblity.",
+			validation: (Rule: any) => {
+				return Rule.custom((field: any, context: any) =>
+					context.parent && "asset" in context.parent && field === undefined
+						? "Required!"
+						: true
+				);
+			},
+		},
+	],
 	preview: {
 		select: {
 			asset: "asset",
@@ -51,7 +51,7 @@ export default defineArrayMember({
 			customAlt: "alt",
 			customRatio: "customRatio",
 		},
-		prepare({ alt, customAlt, customRatio, asset }) {
+		prepare({ alt, customAlt, customRatio, asset }: any) {
 			const crop = crops.find((crop) => crop.value === customRatio);
 			return {
 				title: customAlt ?? alt ?? "(alt text missing)",
@@ -60,4 +60,4 @@ export default defineArrayMember({
 			};
 		},
 	},
-});
+};

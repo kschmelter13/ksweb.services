@@ -1,34 +1,31 @@
-import { defineType, defineField, defineArrayMember } from "sanity";
 import { IoUnlinkOutline } from "react-icons/io5";
 
-const labelField = defineField({
-	title: "Label",
-	name: "label",
-	type: "string",
-});
-
-const hrefField = defineField({
-	title: "URL",
-	name: "href",
-	type: "url",
-	validation: (Rule) =>
-		Rule.uri({
-			allowRelative: true,
-			scheme: ["https", "http", "mailto", "tel"],
-		}),
-});
-
-const newWindowField = defineField({
-	title: "Open in new window?",
-	name: "newWindow",
-	type: "boolean",
-	initialValue: false,
-});
-
-export default defineArrayMember({
+export default {
 	title: "Button",
 	name: "button",
 	type: "object",
 	icon: IoUnlinkOutline,
-	fields: [labelField, hrefField, newWindowField],
-});
+	fields: [
+		{
+			title: "Label",
+			name: "label",
+			type: "string",
+		},
+		{
+			title: "URL",
+			name: "href",
+			type: "url",
+			validation: (Rule: any) =>
+				Rule.uri({
+					allowRelative: true,
+					scheme: ["https", "http", "mailto", "tel"],
+				}),
+		},
+		{
+			title: "Open in new window?",
+			name: "newWindow",
+			type: "boolean",
+			initialValue: false,
+		},
+	],
+};

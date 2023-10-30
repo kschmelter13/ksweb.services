@@ -39,12 +39,16 @@ export const ButtonCVA = forwardRef(
 		},
 		ref: any
 	) => {
-		return createElement(as, {
-			ref,
-			className: button({ variant, size, class: className }),
-			...rest,
-			children,
-		});
+		return createElement(
+			as,
+			{
+				ref,
+				className: button({ variant, size, class: className }),
+				...rest,
+			},
+			children
+		);
+
 		// return (
 		//   <button className={button({ variant, size, class: className })} {...rest}>
 		//     {children}
@@ -52,6 +56,8 @@ export const ButtonCVA = forwardRef(
 		// );
 	}
 );
+
+ButtonCVA.displayName = "ButtonCVA";
 
 export type ButtonProps = {
 	href?: string;

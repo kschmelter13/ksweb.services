@@ -13,7 +13,7 @@ type PhotoProps = {
 	layout?: "intrinsic" | "fill" | "responsive" | "fixed";
 	quality?: number;
 	hasPlaceholder?: boolean;
-	onLoad?: () => void;
+	onLoad: () => void;
 	className?: string;
 };
 
@@ -27,8 +27,6 @@ const Photo = ({
 	onLoad,
 	className,
 }: PhotoProps) => {
-	if (!photo?.asset) return null;
-
 	const [isLoaded, setIsLoaded] = useState(false);
 
 	const src = buildSrc(photo, {
@@ -46,6 +44,7 @@ const Photo = ({
 	}, [isLoaded]);
 
 	const sizes = buildSizes(layout);
+	if (!photo?.asset) return null;
 
 	return (
 		<figure className={className ? className : ""}>
