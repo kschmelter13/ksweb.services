@@ -281,24 +281,24 @@ export function buildSrc(image: any, { width, height, format, quality }: any) {
 	return imgSrc.fit("max").auto("format");
 }
 
-export function buildSrcSet(image, { srcSizes, aspect, format, quality }) {
-	const sizes = srcSizes.map((width) => {
-		let imgSrc = buildSrc(image, {
-			...{ width },
-			height: aspect && Math.round(width * aspect) / 100,
-			...{ format },
-			...{ quality },
-		});
+// export function buildSrcSet(image, { srcSizes, aspect, format, quality }) {
+// 	const sizes = srcSizes.map((width) => {
+// 		let imgSrc = buildSrc(image, {
+// 			...{ width },
+// 			height: aspect && Math.round(width * aspect) / 100,
+// 			...{ format },
+// 			...{ quality },
+// 		});
 
-		if (format) {
-			imgSrc = imgSrc.format(format);
-		}
+// 		if (format) {
+// 			imgSrc = imgSrc.format(format);
+// 		}
 
-		return `${imgSrc} ${width}w`;
-	});
+// 		return `${imgSrc} ${width}w`;
+// 	});
 
-	return sizes.join(",");
-}
+// 	return sizes.join(",");
+// }
 
 export function buildSizes(layout: string) {
 	switch (layout) {
